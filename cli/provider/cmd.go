@@ -174,7 +174,7 @@ func (c *CmdConfigurator) AddFlags(cmd *cobra.Command) error {
 	var err error
 	cmd.Flags().SetNormalizeFunc(aliasNormalizeFunc)
 	switch cmd.Name() {
-	case "update":
+	case "update", "export":
 		return nil
 	case "normalize":
 		cmd.Flags().StringP("path", "p", ".", "Path to local directory where generated testcases/mocks/reports are stored")
